@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+   
+    <title>Good Morning Sunshine</title>
+</head>
+<body>
+
+    <div class="login-box">
+        <div class="login-box-centerd">
+            <h1>נא הכניסי את שמך</h1>
+            <div class="bottom-part">
+                <input class="input-name" lang="he" />
+                <button onclick="showImage()" class="send-btn">שלחי</button>
+            </div>
+        </div>
+        <div class="image-box">
+            <h1 class="good-morning-text"></h1>
+            <img id="displayedImage" src="" alt="Image will appear here" style="display:none;">
+        </div>
+    </div>
+
+
+    <script>
+        const showImage = ()=>{
+            const inputText = document.querySelector('.input-name').value
+            
+            if(inputText !== 'עירית')
+                return
+
+            const loginBox = document.querySelector('.login-box-centerd');
+            const image = document.getElementById('displayedImage');
+            const textElem = document.querySelector('.good-morning-text')
+
+            loginBox.style.display = 'none';
+            const elem = document.createElement('h1')
+            
+
+            textElem.textContent = 'בוקר טוב מאמי שלי'
+            image.src = 'https://i.pinimg.com/originals/19/48/7a/19487a02ee6ee5f37eed0226f15c246d.gif'; // Replace with your image path
+            image.style.display = 'block';
+ 
+        }
+
+
+    </script>
+    
+</body>
+</html>
